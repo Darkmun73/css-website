@@ -1,0 +1,36 @@
+pad = 10px
+
+img
+  width 100%
+  height 100%
+
+.text-block
+  padding pad/2
+  margin pad/2
+  .image-block
+    padding pad
+    float right
+    width 40%
+    overflow hidden
+  p
+    line-height 2
+    margin 1vw
+    text-align justify
+    text-indent 2vw
+    word-spacing 0.5em
+    justify-content:space-evenly
+
+    
+@media(max-width:600px)
+  .text-block
+    padding pad/2
+    margin @padding
+    .image-block
+      margin auto         
+      float none
+      width 50%
+      p
+        line-height 2
+        margin pad
+        text-align justify
+        word-spacing 1px

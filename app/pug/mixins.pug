@@ -1,0 +1,36 @@
+include title_names
+
+mixin createMenu (title)
+    .menu-flex
+        .menu-item
+            if title == CSSMain
+                a(href="index.html")
+                    span CSS
+            else
+                a(href="index.html") CSS
+        .menu-item
+            if title == MyPage
+                a(href="processors.html")
+                    span Синтаксис CSS
+            else
+                a(href="processors.html") Синтаксис CSS
+        .menu-item
+            a(href="") Вставка CSS
+        .menu-item
+            a(href="") CSS текст
+        .menu-item
+            if title == CSSFont
+                a(href="css_font.html")
+                    span CSS шрифт
+            else
+                a(href="css_font.html") CSS шрифт
+        .menu-item
+            a(href="") Блоки
+
+mixin createPictures(...picturesList)
+    each picturePath in picturesList
+        img(src=picturePath)
+
+mixin createImageBlock (url, imageWidth)
+    .imagesFlexItem(width = imageWidth)
+        img(src = url)
